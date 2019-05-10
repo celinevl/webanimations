@@ -1,0 +1,140 @@
+/* Styling van de shapes */
+
+#parallelogramdik {
+    width: 75%;
+    height: 100px;
+    transform: skew(20deg);
+    background: #e75f2b;
+    margin-left: 10em;
+    z-index: 1;
+    transition: all 2s;
+}
+
+#parallelogramdik:hover {
+    width: 100%;
+    transform: skew(20deg);
+    background: #e75f2b;
+    margin-left: -10em;
+    z-index: 1;
+}
+
+#parallelogramdun {
+    width: 95%;
+    height: 10px;
+    transform: skew(20deg);
+    background: #e75f2b;
+    margin-left: 0.30em;
+}
+
+#parallelogramztop {
+    width: 99%;
+    height: 20px;
+    transform: skew(20deg);
+    background: #393836;
+    margin-left: 0.25em;
+    margin-top: -5.5em;
+    z-index: 2;
+
+}
+
+#parallelogramzmiddle {
+    width: 35%;
+    height: 15px;
+    transform: skew(20deg);
+    background: #393836;
+    margin-top: 1em;
+    margin-left: 39em;
+    z-index: 2;
+}
+
+#parallelogramzbottom {
+    width: 95%;
+    height: 20px;
+    transform: skew(20deg);
+    background: #393836;
+    margin-top: 2.5em;
+}
+
+#rectangle {
+    width: 94%;
+    height: 2px;
+    background: #e75f2b;
+    z-index: 2;
+    margin-top: 3.7em;
+}
+
+#rectanglestack1 {
+    width: 75%;
+    height: 1px;
+    background: #393836;
+    margin-bottom: 0.05em;
+}
+
+#rectanglestack2 {
+    width: 75%;
+    height: 1px;
+    background: #393836;
+    margin-bottom: 0.05em;
+}
+
+#rectanglestack3 {
+    width: 75%;
+    height: 1px;
+    background: #393836;
+    margin-bottom: 0.05em;
+}
+
+#rectanglestack4 {
+    width: 75%;
+    height: 1px;
+    background: #393836;
+    margin-bottom: 0.05em;
+}
+
+#rectanglestack5 {
+    width: 75%;
+    height: 1px;
+    background: #393836;
+    margin-bottom: 0.05em;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
+.containershapes {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.containertekst {
+    grid-column: 3;
+    grid-row: 3;
+    font-family: "Montserrat-Light";
+    letter-spacing: 1em;
+    font-size: 0.5em;
+}
+
+
+/* Styling van de tekst */
+
+h1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    /*
+    grid-row-start: 1;
+    grid-row-end: 1;
+*/
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1em;
+    font-family: "Montserrat-Black";
+}
