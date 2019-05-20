@@ -288,11 +288,19 @@ h2 {
 @media only screen and (max-width: 320px) {
  
 .containertekst {
+    grid-row: 4;
     letter-spacing: 0.5em;
     font-size: 1em;
 }
-     #rectangle,#rectanglestack5, #rectanglestack4, #rectanglestack3, #rectanglestack2, #rectanglestack1, #parallelogramzbottom, #parallelogramzmiddle,#parallelogramdik {
-        transform: rotate(120deg);
-    }
+    
+    .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 10em;
+    margin-bottom: 5em;
+}
     
 }
