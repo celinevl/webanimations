@@ -1,3 +1,39 @@
+/* Disclaimer! Veel selectors en propertys die ik in mijn CSS heb geschreven heb ik opgezocht via CSS-Tricks.com. Hier heb ik dan mijn eigen draai aan gegeven, maar voor inspiratie ben ik vooral daar wezen kijken aangezien ik dit niet allemaal uit mijn hoofd wist. Code die ik direct van internet heb of hulp bij heb gehad van mede studenten staat direct boven de desbetrefende code.  */
+
+body {
+    background-color: #f6f2e7;
+}
+
+
+
+/* grid heb ik opgezet */
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.containershapes {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+#parallelogramdik {
+    width: 30%;
+    height: 100px;
+    transform: skew(20deg);
+    background: #e75f2b;
+    margin-left: 10em;
+}
+
+
 /* Styling van de shapes */
 
 #parallelogramdik {
@@ -6,16 +42,6 @@
     transform: skew(20deg);
     background: #e75f2b;
     margin-left: 10em;
-    z-index: 1;
-    transition: all 2s;
-}
-
-#parallelogramdik:hover {
-    width: 100%;
-    transform: skew(20deg);
-    background: #e75f2b;
-    margin-left: -10em;
-    z-index: 1;
 }
 
 #parallelogramdun {
@@ -33,8 +59,6 @@
     background: #393836;
     margin-left: 0.25em;
     margin-top: -5.5em;
-    z-index: 2;
-
 }
 
 #parallelogramzmiddle {
@@ -42,9 +66,7 @@
     height: 15px;
     transform: skew(20deg);
     background: #393836;
-    margin-top: 1em;
-    margin-left: 39em;
-    z-index: 2;
+    margin-left: auto;
 }
 
 #parallelogramzbottom {
@@ -52,7 +74,6 @@
     height: 20px;
     transform: skew(20deg);
     background: #393836;
-    margin-top: 2.5em;
 }
 
 #rectangle {
@@ -98,6 +119,18 @@
     margin-bottom: 0.05em;
 }
 
+.green {
+    background: #2aade3 !important; 
+}
+
+.white {
+    background: #dcba99 !important;
+}
+
+.blue {
+    background: #dbeaf9 !important;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -115,26 +148,157 @@
     grid-row-end: 3;
 }
 
+/* code deels van: https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+.containershapes, .containertekst {
+            animation: fadein 8s;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    40%{
+        opacity: 0;
+    }
+    90% {
+        opacity: 1;
+    }
+}
+
 .containertekst {
-    grid-column: 3;
     grid-row: 3;
     font-family: "Montserrat-Light";
     letter-spacing: 1em;
     font-size: 0.5em;
 }
 
+.textrechts {
+    grid-column: 3;
+}
 
-/* Styling van de tekst */
+.textlinks {
+    grid-column: 1;
+}
 
+
+.textmidden {
+    grid-column: 2;
+}
+
+
+.containershapes div {
+    width: auto;
+    height: auto;
+}
+
+/* bounceIn animation met behulp van https://thoughtbot.com/blog/css-animation-for-beginners */
 h1 {
     grid-column-start: 1;
     grid-column-end: 4;
-    /*
-    grid-row-start: 1;
-    grid-row-end: 1;
-*/
     font-size: 1em;
     text-transform: uppercase;
-    letter-spacing: 1em;
+    letter-spacing: 1.5em;
     font-family: "Montserrat-Black";
+    animation: bounceIn 2.5s;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    60% {
+        transform: scale(1.2);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    
+    }
+}
+
+h1:hover {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    font-size: 1em;
+    text-transform: uppercase;
+    letter-spacing: 1.5em;
+    font-family: "Montserrat-Black";
+    opacity: 0;
+    transform: skewX(7deg);
+    transition: 1s;
+    transition-duration: 1s;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1em;
+    margin-top: 2em;
+    font-family: "Montserrat-Black";
+}
+
+
+/* MEDIUM SCREENS */
+
+@media (min-width: 480px) and (max-width: 1024px) {
+
+    #rectangle,#rectanglestack5, #rectanglestack4, #rectanglestack3, #rectanglestack2, #rectanglestack1, #parallelogramzbottom, #parallelogramzmiddle,#parallelogramdik {
+        transform: rotate(90deg);
+    }
+    
+    #rectanglestack5 {
+       margin-left: 0.3em;
+    }
+     #rectanglestack4 {
+       margin-left: 0.4em;
+    }
+     #rectanglestack3 {
+       margin-left: 0.6em;
+    }
+     #rectanglestack2 {
+       margin-left: 0.8em;
+    }
+    
+    #rectangle {
+        margin-left: -1em;
+    }
+    
+    h1 {
+        grid-column: 1;
+        letter-spacing: 0.5em;
+        font-size: 1em;
+    }
+    #parallelogramdik {
+       height: 50px;
+    }
+    
+    #parallelogramztop, #parallelogramdik {
+        margin: auto;
+    }
+    
+    #parallelogramzmiddle {
+        margin-left: 0.1em;
+    }
+
+    h1:hover {
+    grid-column-start: 1;
+    grid-column-end: 1;
+    letter-spacing: 0.6em;
+}
+}
+
+/*}*/
+
+
+/*
+@media only screen and (max-width: 320px) {
+    
+  .containershapes {
+    grid-column-start: 2;
+      grid-column-end: 2;
+          grid-row-start: 2;
+    grid-row-end: 3;
+}
+*/
 }
