@@ -14,6 +14,7 @@ In eerste instantie wilde ik alles verticaal weergeven, maar zo een beetje door 
 Animaties die ik heb gebruikt zijn het inspringen van de titel, zodra je hovert over de tekst heen skewt deze mee met de richting van het werk. 
 En tegelijkertijd vervaagd de tekst ook. 
 De onderste tekst is te verplaatsen met de pijltjes toetsen. (Left, right, up)
+Voor de achtergrondkleur kun je op de 'B' toets klikken, en dan veranderd de achtergrond mee. 
 En de shapes kun je van kleur veranderen door er op te klikken. 
 
 Een aantal nice to haves die ik nog had willen toevoegen waren 
