@@ -7,6 +7,7 @@ var parallelogramzbottom = document.querySelector('#parallelogramzbottom');
 var parallelogramztop = document.querySelector('#parallelogramztop');
 var parallelogramzmiddle = document.querySelector('#parallelogramzmiddle');
 var text = document.querySelector('.containertekst');
+var achtergrond = document.querySelector('body');
 
 parallelogramdik.addEventListener('click', function() {
     parallelogramdik.classList.toggle('green');
@@ -55,7 +56,23 @@ function tekstVerplaatsen(e){
         text.classList.remove('textlinks');
         text.classList.remove('textrechts');
     }
+      if (e.keyCode === 66) {
+      achtergrond.classList.toggle('achtergrondkleur');
+    }
 
 }
 
 document.onkeydown = tekstVerplaatsen;
+
+//
+//function achtergrondKleur(e){
+//    
+//    // achtergrond kleur 'B'
+//    if (e.keyCode === 66) {
+//      achtergrond.classList.toggle('achtergrondkleur');
+//    }
+//
+//}
+//
+//document.onkeydown = achtergrondKleur;
+//

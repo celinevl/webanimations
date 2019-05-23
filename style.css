@@ -4,17 +4,18 @@ body {
     background-color: #f6f2e7;
 }
 
-/* grid heb ik opgezet */
+/* grid heb ik opgezet samen met Agung */
 
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-left: 5em;
-    margin-right: 5em;
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-left: 10em;
+    margin-right: 10em;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
+
 
 .containershapes {
     grid-column-start: 1;
@@ -109,6 +110,7 @@ body {
     margin-bottom: 0.05em;
 }
 
+/* */
 .green {
     background: #2aade3 !important; 
 }
@@ -117,24 +119,9 @@ body {
     background: #747474 !important;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    margin-left: 10em;
-    margin-right: 10em;
-    margin-top: 5em;
-    margin-bottom: 5em;
-}
 
-.containershapes {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
-}
-
-/* code deels van: https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load */
+/* code deels van: https://stackoverflow.com/questions/11679567/using-css-for-fade-in-effect-on-page-load 
+deze zorgt ervoor dat de shapes en de paragraaf in fade na een paar seconden, waneer de h1 er staat. */
 .containershapes, .containertekst {
             animation: fadein 8s;
 }
@@ -154,10 +141,9 @@ body {
 .containertekst {
     grid-row: 3;
     font-family: "Montserrat-Regular";
-    letter-spacing: 0.4em;
-    font-size: 0.8em;
 }
 
+/* De columns waar de text komt na het drukken op de pijltjes <, ^ of > */
 .textrechts {
     grid-column: 3;
 }
@@ -177,7 +163,11 @@ body {
     height: auto;
 }
 
-/* bounceIn animation met behulp van https://thoughtbot.com/blog/css-animation-for-beginners */
+.achtergrondkleur {
+    background-color: #cccccc;
+}
+
+/* bounceIn animation met behulp van https://thoughtbot.com/blog/css-animation-for-beginners. Zorgt er voor dar de titel in komt vliegen.*/
 h1 {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -204,6 +194,7 @@ h1 {
     }
 }
 
+/* zodra je hovert fade de tekst uit */
 h1:hover {
     grid-column-start: 1;
     grid-column-end: 4;
@@ -219,9 +210,15 @@ h1:hover {
 
 h2 {
     text-transform: uppercase;
-    font-size: 1em;
+    font-size: 0.8em;
     margin-top: 2em;
     font-family: "Montserrat-Black";
+    letter-spacing: 0.4em;
+}
+
+p {
+    font-size: 0.8em;
+    letter-spacing: 0.4em;
 }
 
 
@@ -285,8 +282,10 @@ h2 {
 
 @media only screen and (max-width: 320px) {
 
+    p, h2 {
+        font-size: 1em;
+    }
     
 }
     
     
-}
