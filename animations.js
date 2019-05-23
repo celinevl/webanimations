@@ -51,11 +51,14 @@ function tekstVerplaatsen(e){
         text.classList.remove('textlinks');
     }
     
+    // pijtje omhoog 
     if (e.keyCode === 38) {
        text.classList.toggle('textmidden');
         text.classList.remove('textlinks');
         text.classList.remove('textrechts');
     }
+    
+    // B voor background color
       if (e.keyCode === 66) {
       achtergrond.classList.toggle('achtergrondkleur');
     }
@@ -63,16 +66,3 @@ function tekstVerplaatsen(e){
 }
 
 document.onkeydown = tekstVerplaatsen;
-
-//
-//function achtergrondKleur(e){
-//    
-//    // achtergrond kleur 'B'
-//    if (e.keyCode === 66) {
-//      achtergrond.classList.toggle('achtergrondkleur');
-//    }
-//
-//}
-//
-//document.onkeydown = achtergrondKleur;
-//

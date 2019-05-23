@@ -143,7 +143,7 @@ deze zorgt ervoor dat de shapes en de paragraaf in fade na een paar seconden, wa
     font-family: "Montserrat-Regular";
 }
 
-/* De columns waar de text komt na het drukken op de pijltjes <, ^ of > */
+/* Styling voor de key events. */
 .textrechts {
     grid-column: 3;
 }
@@ -167,7 +167,8 @@ deze zorgt ervoor dat de shapes en de paragraaf in fade na een paar seconden, wa
     background-color: #cccccc;
 }
 
-/* bounceIn animation met behulp van https://thoughtbot.com/blog/css-animation-for-beginners. Zorgt er voor dar de titel in komt vliegen.*/
+/* bounceIn animation met behulp van 
+https://thoughtbot.com/blog/css-animation-for-beginners. Zorgt er voor dar de titel in komt vliegen.*/
 h1 {
     grid-column-start: 1;
     grid-column-end: 4;
